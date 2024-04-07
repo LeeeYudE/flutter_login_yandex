@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_login_yandex/flutter_login_yandex_method_channel.dart';
+import 'package:flutter_login_yandex_updated/flutter_login_yandex_method_channel.dart';
 
 void main() {
   MethodChannelFlutterLoginYandex platform = MethodChannelFlutterLoginYandex();

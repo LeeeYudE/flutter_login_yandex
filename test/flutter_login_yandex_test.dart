@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_login_yandex/flutter_login_yandex.dart';
-import 'package:flutter_login_yandex/flutter_login_yandex_platform_interface.dart';
-import 'package:flutter_login_yandex/flutter_login_yandex_method_channel.dart';
+import 'package:flutter_login_yandex_updated/flutter_login_yandex.dart';
+import 'package:flutter_login_yandex_updated/flutter_login_yandex_platform_interface.dart';
+import 'package:flutter_login_yandex_updated/flutter_login_yandex_method_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockFlutterLoginYandexPlatform
