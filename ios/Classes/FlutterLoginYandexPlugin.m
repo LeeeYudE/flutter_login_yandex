@@ -1,6 +1,6 @@
 #import "FlutterLoginYandexPlugin.h"
 #if __has_include(<flutter_login_yandex_updated/flutter_login_yandex_updated-Swift.h>)
-#import <flutter_login_yandex_updated/flutter_login_yandex-Swift.h>
+#import <flutter_login_yandex_updated/flutter_login_yandex_updated-Swift.h>
 #else
 // Support project import fallback if the generated compatibility header
 // is not copied when this plugin is created as a library.
