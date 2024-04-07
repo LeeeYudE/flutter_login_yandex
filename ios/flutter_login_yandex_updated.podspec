@@ -3,7 +3,7 @@
 # Run `pod lib lint flutter_login_yandex.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'flutter_login_yandex'
+  s.name             = 'flutter_login_yandex_updated'
   s.version          = '0.0.5'
   s.summary          = 'A new Flutter plugin project.'
   s.description      = <<-DESC
