@@ -8,7 +8,8 @@ abstract class FlutterLoginYandexPlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static FlutterLoginYandexPlatform _instance = MethodChannelFlutterLoginYandex();
+  static FlutterLoginYandexPlatform _instance =
+      MethodChannelFlutterLoginYandex();
 
   /// The default instance of [FlutterLoginYandexPlatform] to use.
   ///

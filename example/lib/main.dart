@@ -47,7 +47,8 @@ class _MyAppState extends State<MyApp> {
                     });
                   }
                 },
-                child: const Padding(padding: EdgeInsets.all(15), child: Text('Press')),
+                child: const Padding(
+                    padding: EdgeInsets.all(15), child: Text('Press')),
               ),
               if (Platform.isIOS)
                 InkWell(
@@ -57,7 +58,8 @@ class _MyAppState extends State<MyApp> {
                       _token = '';
                     });
                   },
-                  child: const Padding(padding: EdgeInsets.all(15), child: Text('Sign Out')),
+                  child: const Padding(
+                      padding: EdgeInsets.all(15), child: Text('Sign Out')),
                 ),
             ],
           ),

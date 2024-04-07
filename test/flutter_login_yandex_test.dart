@@ -7,9 +7,8 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 class MockFlutterLoginYandexPlatform
     with MockPlatformInterfaceMixin
     implements FlutterLoginYandexPlatform {
-
   @override
-  Future<Map<String, String>?> signIn() => Future.value({'42':'42'});
+  Future<Map<String, String>?> signIn() => Future.value({'42': '42'});
 
   @override
   Future<Map<Object?, Object?>?> signOut() {
@@ -19,7 +18,8 @@ class MockFlutterLoginYandexPlatform
 }
 
 void main() {
-  final FlutterLoginYandexPlatform initialPlatform = FlutterLoginYandexPlatform.instance;
+  final FlutterLoginYandexPlatform initialPlatform =
+      FlutterLoginYandexPlatform.instance;
 
   test('$MethodChannelFlutterLoginYandex is the default instance', () {
     expect(initialPlatform, isInstanceOf<MethodChannelFlutterLoginYandex>());
@@ -27,7 +27,8 @@ void main() {
 
   test('getPlatformVersion', () async {
     FlutterLoginYandex flutterLoginYandexPlugin = FlutterLoginYandex();
-    MockFlutterLoginYandexPlatform fakePlatform = MockFlutterLoginYandexPlatform();
+    MockFlutterLoginYandexPlatform fakePlatform =
+        MockFlutterLoginYandexPlatform();
     FlutterLoginYandexPlatform.instance = fakePlatform;
 
     expect(await flutterLoginYandexPlugin.signIn(), '42');
