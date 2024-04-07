@@ -19,7 +19,7 @@ Flutter plugin for authorization with Yandex LoginSDK for iOS and Android
 ## SDK documentation
 - https://yandex.ru/dev/id/doc/ru/mobileauthsdk/about
 
-### Android setup
+## Android setup
 Add to your android/app/build.gradle default section this with replacement of yourClientId to Yandex OAuth app client id:
 ```
 manifestPlaceholders += [YANDEX_CLIENT_ID:"yourClientId"]
@@ -37,7 +37,7 @@ defaultConfig {
 }
 ```
 
-### iOS setup
+## iOS setup
 Add this to your app Info.plist and replace "yourCientId" with Yandex client id from OAuth application
 ```xml
 	<key>LSApplicationQueriesSchemes</key>
@@ -65,7 +65,7 @@ Also you need to set up Entitlements, add *Capability: Associated Domains* and e
 applinks:yxyourClientId.oauth.yandex.ru
 ```
 
-### Usage
+## Usage
 
 ```
 final flutterLoginYandexPlugin = FlutterLoginYandex();
