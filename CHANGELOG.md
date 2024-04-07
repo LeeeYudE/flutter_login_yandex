@@ -1,4 +1,4 @@
-## 0.0.7
+## 0.0.5
 
 Update plugin to actual iOS version of YandexLoginSDK v3.0.1
 
