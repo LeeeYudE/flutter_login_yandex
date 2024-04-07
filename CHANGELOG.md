@@ -1,3 +1,6 @@
+## 0.0.7
+Update plugin to actual version of YandexLoginSDK
+
 ## 0.0.4
 
 Podspec ios version changed to 12.0 according to YandexLoginSDK
