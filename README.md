@@ -67,9 +67,7 @@ applinks:yxyourClientId.oauth.yandex.ru
 
 ### Usage
 
-Simply:
-
-```dart
+```
 final flutterLoginYandexPlugin = FlutterLoginYandex();
 final response = await _flutterLoginYandexPlugin.signIn();
 saveToken(response['token'] as String);
