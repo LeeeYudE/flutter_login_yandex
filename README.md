@@ -1,5 +1,5 @@
 # flutter_login_yandex
-! Originaly by spChief !
+! Originaly by spChief ! </br>
 Flutter plugin for authorization with Yandex LoginSDK for iOS and Android
 
 ## Getting Started
@@ -67,9 +67,7 @@ applinks:yxyourClientId.oauth.yandex.ru
 
 ### Usage
 
-Simply:
-
-```dart
+```
 final flutterLoginYandexPlugin = FlutterLoginYandex();
 final response = await _flutterLoginYandexPlugin.signIn();
 saveToken(response['token'] as String);
