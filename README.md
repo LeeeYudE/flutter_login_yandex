@@ -1,5 +1,5 @@
 # flutter_login_yandex
-! Originaly by spChief ! </br>
+Originaly by @spChief </br>
 Flutter plugin for authorization with Yandex LoginSDK for iOS and Android
 
 ## Getting Started
