@@ -48,10 +48,10 @@ public class SwiftFlutterLoginYandexPlugin: NSObject, FlutterPlugin {
     ) -> Bool {
        do {
           try YandexLoginSDK.shared.handleOpenURL(url)
-          return true
        } catch {
           return false
        }
+       return true
     }
 
     func application(
@@ -61,10 +61,10 @@ public class SwiftFlutterLoginYandexPlugin: NSObject, FlutterPlugin {
     ) -> Bool {
         do {
            try YandexLoginSDK.shared.tryHandleUserActivity(userActivity)
-           return true
         } catch {
            return false
         }
+        return true
     }
 
     private func logIn(result: @escaping FlutterResult) {
@@ -74,7 +74,7 @@ public class SwiftFlutterLoginYandexPlugin: NSObject, FlutterPlugin {
           }
         _loginDelegate.startLogin(result: result)
         do {
-            try YandexLoginSDK.shared.authorize(with: viewController, authorizationStrategy: .default)
+            try YandexLoginSDK.shared.authorize(with: viewController)
         } catch {
             result(nil)
         }
