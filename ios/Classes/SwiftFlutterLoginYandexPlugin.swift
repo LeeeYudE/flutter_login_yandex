@@ -78,7 +78,6 @@ public class SwiftFlutterLoginYandexPlugin: NSObject, FlutterPlugin {
         } catch {
             result(nil)
         }
-        YandexLoginSDK.shared.remove(observer: _loginDelegate)
     }
     
     private func logOut(result: @escaping FlutterResult) {
