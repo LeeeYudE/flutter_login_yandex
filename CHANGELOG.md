@@ -1,4 +1,8 @@
+## 0.0.7
+Fixed error related to interaction with YandexLoginObserver  when `signIn` method sometimes does not return anything
+
 ## 0.0.6
+
 Minor inner changes + code formatting
 
 ## 0.0.5
