@@ -21,8 +21,8 @@ public class SwiftFlutterLoginYandexPlugin: NSObject, FlutterPlugin {
         let clientId = Bundle.main.object(forInfoDictionaryKey: "YAClientId") as? String
         do {
             try YandexLoginSDK.shared.activate(with: clientId!)
-        } catch {
-           return
+        } catch let error {
+            print("err YandexLoginSDK: \(error.localizedDescription)")
         }
         registrar.addMethodCallDelegate(instance, channel: channel)
     }

@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_login_yandex/flutter_login_yandex.dart';
+import 'package:flutter_login_yandex_updated/flutter_login_yandex.dart';
 
 void main() {
   runApp(const MyApp());
