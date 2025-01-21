@@ -1,3 +1,6 @@
+## 0.0.9
+Fix build on iOS and update Gradle for android
+
 ## 0.0.8
 Fixed outdated AppDelegate.swift in example
 
