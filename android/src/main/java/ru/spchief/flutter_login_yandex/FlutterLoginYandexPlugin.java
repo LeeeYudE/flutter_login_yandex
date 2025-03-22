@@ -3,6 +3,7 @@ package ru.spchief.flutter_login_yandex;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -34,18 +35,24 @@ public class FlutterLoginYandexPlugin implements FlutterPlugin, MethodCallHandle
   private YandexAuthSdk sdk;
   private ActivityPluginBinding activityPluginBinding;
   private Delegate delegate;
+  private Context context;
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
     channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "flutter_login_yandex");
     channel.setMethodCallHandler(this);
-    Context context = flutterPluginBinding.getApplicationContext();
-    sdk = new YandexAuthSdk(context, new YandexAuthOptions(context, true));
-    delegate = new Delegate(context, sdk);
+    context = flutterPluginBinding.getApplicationContext();
+
+    Log.d("FlutterLoginYandexPlugin", "onAttachedToEngine");
   }
 
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
+    Log.d("FlutterLoginYandexPlugin", "onMethodCall");
+    if(sdk == null){
+      sdk = new YandexAuthSdk(context, new YandexAuthOptions(context, true));
+      delegate = new Delegate(context, sdk);
+    }
     if (call.method.equals("signIn")) {
       delegate.signIn(result);
     } else {
@@ -54,6 +61,7 @@ public class FlutterLoginYandexPlugin implements FlutterPlugin, MethodCallHandle
   }
 
   private void dispose() {
+    Log.d("FlutterLoginYandexPlugin", "dispose");
     delegate = null;
     channel.setMethodCallHandler(null);
     channel = null;
@@ -63,6 +71,7 @@ public class FlutterLoginYandexPlugin implements FlutterPlugin, MethodCallHandle
     this.activityPluginBinding = activityPluginBinding;
     activityPluginBinding.addActivityResultListener(delegate);
     delegate.setActivity(activityPluginBinding.getActivity());
+    Log.d("FlutterLoginYandexPlugin", "attachToActivity");
   }
 
   private void disposeActivity() {
