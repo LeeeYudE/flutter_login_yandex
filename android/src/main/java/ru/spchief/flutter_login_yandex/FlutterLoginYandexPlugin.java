@@ -36,6 +36,7 @@ public class FlutterLoginYandexPlugin implements FlutterPlugin, MethodCallHandle
   private ActivityPluginBinding activityPluginBinding;
   private Delegate delegate;
   private Context context;
+  private Activity activity;
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
@@ -52,6 +53,8 @@ public class FlutterLoginYandexPlugin implements FlutterPlugin, MethodCallHandle
     if(sdk == null){
       sdk = new YandexAuthSdk(context, new YandexAuthOptions(context, true));
       delegate = new Delegate(context, sdk);
+      activityPluginBinding.addActivityResultListener(delegate);
+      delegate.setActivity(activityPluginBinding.getActivity());
     }
     if (call.method.equals("signIn")) {
       delegate.signIn(result);
@@ -69,8 +72,6 @@ public class FlutterLoginYandexPlugin implements FlutterPlugin, MethodCallHandle
 
   private void attachToActivity(ActivityPluginBinding activityPluginBinding) {
     this.activityPluginBinding = activityPluginBinding;
-    activityPluginBinding.addActivityResultListener(delegate);
-    delegate.setActivity(activityPluginBinding.getActivity());
     Log.d("FlutterLoginYandexPlugin", "attachToActivity");
   }
 
