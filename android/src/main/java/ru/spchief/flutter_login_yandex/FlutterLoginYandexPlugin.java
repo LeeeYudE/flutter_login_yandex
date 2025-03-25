@@ -76,8 +76,10 @@ public class FlutterLoginYandexPlugin implements FlutterPlugin, MethodCallHandle
   }
 
   private void disposeActivity() {
-    activityPluginBinding.removeActivityResultListener(delegate);
-    delegate.setActivity(null);
+    if(delegate != null && activityPluginBinding != null){
+      activityPluginBinding.removeActivityResultListener(delegate);
+      delegate.setActivity(null);
+    }
     activityPluginBinding = null;
   }
 
